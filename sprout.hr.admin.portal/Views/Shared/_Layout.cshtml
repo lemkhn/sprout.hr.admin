@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - sprout.hr.admin.portal</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    <component>
+        @(await Html.RenderComponentAsync<Header>(RenderMode.ServerPrerendered))
+    </component>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <section>
+        <span id="btnTop" title="Go to Top">
+            <i class="fas fa-arrow-up" style="font-size:18px; margin-bottom:5px; width:100%; text-align: center"></i>
+        </span>
+    </section>
+
+    <component>
+        @(await Html.RenderComponentAsync<Footer>(RenderMode.ServerPrerendered))
+    </component>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/datatable/js/jquery.dataTables.min.js"></script>
+    <script src="~/lib/datatable/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/lib/datatable/js/dataTables.responsive.min.js"></script>
+    <script src="~/lib/moment/moment.js"></script>
+    <script src="~/js/site.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

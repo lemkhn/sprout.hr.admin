@@ -1,0 +1,85 @@
+﻿.table {
+    width: 100%;
+    background-color: white;
+
+    border: 1px solid rgba(0,0,0,.12);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+
+    thead {
+        th {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-weight: 500;
+            color: #555454;
+        }
+    }
+
+    tbody {
+        tr {
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease-in-out;
+
+            td {
+                font-size: 0.9em;
+                color: #5d5d5e;
+            }
+
+            &.selected {
+                box-shadow: 0px 0px 15px 1px rgba(35, 35, 35, .5);
+                background-color: #8e8c8c;
+
+                td {
+                    color: #ffffff;
+                    border-top: none;
+                }
+            }
+
+            &.child {
+                td.child {
+                    padding-left: 10px !important;
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+div.dataTables_wrapper {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+div.dataTables_wrapper div.dataTables_paginate {
+    margin-top: 10px;
+}
+
+.pagination {
+    font-size: .85em;
+    right: 0 !important;
+    position: absolute !important;
+    padding-right: 1em;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child::before, table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child::before {
+    background-color: #007bff;
+    border-radius: 0;
+    border: none;
+    top: 13px;
+}
+
+table.dataTable > tbody > tr.child span.dtr-title {
+    display: block;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.child, table.dataTable.dtr-inline.collapsed > tbody > tr > th.child, table.dataTable.dtr-inline.collapsed > tbody > tr > td.dataTables_empty {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.child > table {
+    width: 100%;
+}
+
+.dataTables_filter{
+    float: right !important;
+}

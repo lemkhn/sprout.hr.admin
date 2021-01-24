@@ -3,3 +3,8 @@
 ################################################################################
 
 /sprout.hr.admin.core/bin/Debug/netcoreapp3.1
+/sprout.hr.admin.core/obj
+/sprout.hr.admin.portal/bin/Debug/netcoreapp3.1
+/sprout.hr.admin.portal/obj
+/sprout.hr.admin.test/bin/Debug/netcoreapp3.1
+/sprout.hr.admin.test/obj
